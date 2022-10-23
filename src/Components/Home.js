@@ -1,15 +1,15 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { Outlet, Link } from "react-router-dom";
 
 
-
-function Navbar() {
+function Home() {
   return (
     <div>
-        <nav className="flex justify-center items-center gap-4 flex-col w-screen h-screen bg-gray-800 text-gray-100">
-            <div className=''>
-                <span className='text-4xl font-sans font-bold'> Cheng </span>
+        <nav className="flex justify-center items-center gap-4 flex-col w-screen h-screen bg-slate-900 text-gray-100 ">
+            <div className=''>    
+                <span className='text-4xl font-sans font-bold '> Cheng  </span>
             </div>   
             
             <p className='max-w-2xl text-center '>
@@ -19,23 +19,24 @@ function Navbar() {
                 type specimen book.
             </p>
             
-            <div className='flex gap-4 text-2xl'>
+            <div className='flex gap-4 text-2xl '>
                 <div>
-                    <a href='#0'>
+                    <Link to="/Projects" className='hover:text-violet-700'>
                         Projects
-                    </a>
+                    </Link>
                 </div>
                 <div>
-                    <a href='#'>
+                    <a href='#' className='hover:text-violet-700'>
                         Articles
                     </a>
                 </div>
                 <div>
-                    <a href='#'>
+                    <a href='#' className='hover:text-violet-700'>
                         Contact me
                     </a>
                 </div>
             </div>
+
             <div className='text-xl flex gap-4 '>
                 <a href='https://ethereum.stackexchange.com/users/101509/theycallmecheng' className='hover:text-green-500'>
                     <i class="fa-brands fa-stack-overflow"></i>
@@ -50,4 +51,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Home
